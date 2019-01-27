@@ -10,5 +10,5 @@ buildNumber.properties
 .mvn/timing.properties
 
 ### Intellij ###
-contact_list.iml.old
+contact_list.iml
 .idea/*
