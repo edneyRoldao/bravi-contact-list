@@ -1,0 +1,21 @@
+version: '3'
+services:
+  contacts-app:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: .
+    image: edneyroldao/maven-jdk-8
+    container_name: maven-jdk-8
+    ports:
+      - 8080:8080
+    networks:
+      - bravi-network
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    networks:
+      - bravi-network
+networks:
+  bravi-network:
+    driver: bridge
